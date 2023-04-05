@@ -3,6 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React,{ useState } from 'react';
 import { useEffect } from 'react';
 import { Button,FormControl,Form } from 'react-bootstrap';
+
+import { ReactComponent as Edit } from './assets/edit.svg';
+import { ReactComponent as Trash } from './assets/trash.svg';
+import { ReactComponent as Save } from './assets/save.svg';
+
+
 function App() {
 
   const[todoList,setTodoList]=useState([])
@@ -42,9 +48,11 @@ function App() {
             {todoItem}
             </label>
             </div>
-          <div>
-          <button className=''>
-            butonlae
+          <div className=''>
+          <button className='border-0 bg-transparent'>
+          <Trash className='me-1 icon'  width={20} height={20} ></Trash>
+          <Edit className='me-1 icon' width={20} height={20}></Edit>
+          <Save className='icon' width={20} height={20}></Save>
           </button>
           </div>
     

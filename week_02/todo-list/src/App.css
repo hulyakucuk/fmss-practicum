@@ -1,7 +1,14 @@
 .container{
-background: linear-gradient(#c6edb1, #9da3e4);
+background: linear-gradient(#a2d2ff,#c6edb1 );
 border-radius: 5px;
 height: 500px;
 margin-top: 20px;
 
+}
+button{
+  cursor: pointer;
+
+}
+.icon {
+  fill: rgb(47, 118, 84); 
 }
