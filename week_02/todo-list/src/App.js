@@ -33,6 +33,10 @@ function App() {
 
   }
 
+  const clearCompleted = () => {
+    setTodoList(todoList.filter((todoItem) => !todoItem.isCompleted));
+  };
+
   let filteredList = [];
   if (filter === "completed") {
     filteredList = todoList.filter((todoItem) => todoItem.isCompleted);
@@ -70,6 +74,8 @@ function App() {
         <button  className='title' onClick={() => setFilter("all")}>All</button>
         <button className='title' onClick={() => setFilter("active")}>Active</button>
         <button className='title' onClick={() => setFilter("completed")}>Completed</button>
+        <button className='title ' onClick={() => clearCompleted()}>Clear Completed</button>
+
         </div>
 
      <div className=' w-80 mt-2'>
