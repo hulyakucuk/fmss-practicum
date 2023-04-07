@@ -1,9 +1,12 @@
-.container{
-background: linear-gradient(#a2d2ff,#c6edb1 );
-border-radius: 5px;
-height: 500px;
-margin-top: 20px;
+body{
+  background: linear-gradient(-270deg, #a2d2ff, #79cc78);
 
+}
+.container{
+background-color: rgb(230, 225, 225);
+border-radius: 5px;
+min-width: 280px;
+min-height: 300px;
 }
 button{
   cursor: pointer;
@@ -11,4 +14,13 @@ button{
 }
 .icon {
   fill: rgb(47, 118, 84); 
+}
+.title{
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+.title:hover{
+  text-decoration: underline;
+  color: #2194ff;
 }
