@@ -20,17 +20,20 @@ function App() {
   const[filter,setFilter]=useState("all");
 
 
+// This function works when the "add to" button is clicked and adds a new list item.
+//   add the id:uuid to create a unique id for each item.
   const addTodo=()=>{
     setTodoList((prevTodoList)=>[...prevTodoList,{id:uuidv4(), todo:todo, isCompleted:false}])
     setTodo("")
   }
+
   const completedTodo=(id)=>{
    setTodoList(prevTodoList=>prevTodoList.map(todoItem=> todoItem.id===id
     ?{...todoItem,isCompleted: !todoItem.isCompleted}:todoItem))
   }
 
-
-  const deleteTodo=(id)=>{
+// This function works when the trush icon is clicked and deletes item.
+const deleteTodo=(id)=>{
     setTodoList(prevTodoList => prevTodoList.filter(todoItem=>todoItem.id !==id ))
 
   }
@@ -39,6 +42,8 @@ function App() {
     setTodoList(todoList.filter((todoItem) => !todoItem.isCompleted));
   };
 
+
+  // filter list by category
   let filteredList = [];
   if (filter === "completed") {
     filteredList = todoList.filter((todoItem) => todoItem.isCompleted);
