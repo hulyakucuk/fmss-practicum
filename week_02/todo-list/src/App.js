@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React,{ useState } from 'react';
 import { useEffect } from 'react';
 import { Button,FormControl } from 'react-bootstrap';
+
+// import trash button as component
 import { ReactComponent as Trash } from './assets/trash.svg';
 
 // uuid:To create a random unique id
@@ -69,7 +71,7 @@ function App() {
          className='btn ms-3 bg-success border-0'>Add Todo</Button>
       
     </div>
-      
+           {/* NAV BAR (ALL-ACTIVE-COMPLETED-CLEAR COMPLETED) */}
         <div className='d-flex flex-row mt-3' >
         <button  className='title' onClick={() => setFilter("all")}>All</button>
         <button className='title' onClick={() => setFilter("active")}>Active</button>
