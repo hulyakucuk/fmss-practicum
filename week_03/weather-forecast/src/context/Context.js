@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
 
-const API_KEY = "1bbccc68a6c48e84957f5b79c2f171d4";
+
 export const Context = createContext();
 
 const ContextProvider = ({ children }) => {
@@ -17,7 +17,7 @@ const ContextProvider = ({ children }) => {
     // preventDefault() is used to prevent the default behavior of the form so that the data does not disappear when the page is reloaded.
 
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
     );
     if (!response.ok) {
       serWeatherData(null);
