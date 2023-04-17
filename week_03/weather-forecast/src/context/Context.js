@@ -17,7 +17,7 @@ const ContextProvider = ({ children }) => {
     // preventDefault() is used to prevent the default behavior of the form so that the data does not disappear when the page is reloaded.
 
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`
     );
     if (!response.ok) {
       serWeatherData(null);
