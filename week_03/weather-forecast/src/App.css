@@ -45,7 +45,7 @@ form {
 .search-button {
   width: 120px;
   padding: 10px;
-  background-color: #00bcd4;
+  background-color: #041a25;
   border: none;
   color: white;
   text-transform: uppercase;
@@ -63,8 +63,52 @@ form {
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
 }
 
-@media only screen and (max-width: 768px) {
-  .container {
-    width: 90%;
-  }
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.card,
+.card h3,
+.card p {
+    background-color: #041a25;
+    font-weight: bold;
+
+}
+.card {
+    width: calc(23.33% - 16px);
+    margin: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 16px;
+    opacity: 0.8;
+    text-align: center;
+}
+.card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0px 25px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.title{
+  margin-top: 30px;
+  color:  #041a25;
+  
+}
+
+@media (max-width: 767px) {
+    .search-container {
+        width: 100%;
+    }
+
+    .search-button {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .card {
+        width: 100%;
+    }
 }
