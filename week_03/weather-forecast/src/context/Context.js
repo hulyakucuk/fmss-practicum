@@ -1,16 +1,16 @@
-import React, { useContext } from 'react'
+import React, { createContext } from 'react'
 
-export const Context =useContext();
+export const Context =createContext();
 // context elemanı olusturuldu 
 
 const ContextProvider=()=>{
 
-};
+
 
 return(
-    <ContextProvider>
+    <Context.Provider>
 
-    </ContextProvider>
+    </Context.Provider>
 )
-
+};
 export default ContextProvider;
