@@ -1,4 +1,4 @@
-# TRY ==>>>https://vercel.com/hulyakucuk/weather-app-6uzb/3ntK71fhMVQhYAT95Dg6GRiBdi8R
+# TRY ==>>> https://weather-app-6uzb-8boczmygy-hulyakucuk.vercel.app/
 
 # Getting Started with Create React App
 
