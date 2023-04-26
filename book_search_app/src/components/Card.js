@@ -1,4 +1,5 @@
 import React from "react";
+import CardDetail from "./CardDetail";
 
 const Card = ({ book }) => {
   console.log(book);
@@ -17,6 +18,7 @@ const Card = ({ book }) => {
                 <p className="amount">&8377;3290</p>
               </div>
             </div>
+            <CardDetail />
           </>
         );
       })}
