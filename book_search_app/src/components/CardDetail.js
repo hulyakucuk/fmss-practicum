@@ -2,6 +2,7 @@ import React from 'react'
 import {FaTimesCircle} from "react-icons/fa";
 
 const CardDetail = () => {
+
   return (
     <>
       <div className='overlay'>
@@ -21,7 +22,6 @@ const CardDetail = () => {
             </div>
             <h4 className='description'>knowledge for free...</h4>
         </div>
-
       </div>
     </>
   )
