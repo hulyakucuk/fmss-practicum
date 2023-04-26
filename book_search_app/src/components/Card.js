@@ -2,10 +2,13 @@ import React,{useState} from "react";
 import CardDetail from "./CardDetail";
 
 const Card = ({ book }) => {
-  // console.log(book);
+// console.log(book);
 
   const [show,setShow]=useState(false);
-  // this state will keep track of whether the cardDetail component should be visible or not
+// this state will keep track of whether the cardDetail component should be visible or not
+
+  const [selectedItem,setSelectedItem]=useState();
+// define a state variable called 'selectedItem' to keep track of the currently clicked item in the 'book' array
 
   return (
     <>
@@ -15,14 +18,14 @@ const Card = ({ book }) => {
        if(thumbnail!= undefined && amount !=undefined)
        return (
           <>
-            <div className="card" onClick={()=>setShow(true)}>
+            <div className="card" onClick={()=>setShow(true);setSelectedItem(item)}>
               <img src={thumbnail}/>
               <div className="bottom">
                 <h3 className="title">React.js</h3>
                 <p className="amount">&8377;3290</p>
               </div>
             </div>
-            <CardDetail show={show} onClose={()=>setShow(false)} />
+            <CardDetail show={show} item={selectedItem} onClose={()=>setShow(false)} />
           </>
         );
       })}
