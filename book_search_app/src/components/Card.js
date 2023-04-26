@@ -1,17 +1,27 @@
-import React from 'react'
+import React from "react";
 
-const Card = () => {
+const Card = ({ book }) => {
+  console.log(book);
   return (
     <>
-      <div className='card'>
-        <img />
-        <div className='bottom'>
-            <h3 className='title'>React.js</h3>
-            <p className='amount'>&8377;3290</p>
-        </div>
-      </div>
+      {book.map((item) => {
+       let thumbnail=item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.smallThumbnail;
+       let amount=item.saleInfo.listPrice && item.saleInfo.listPrice.amount;
+       if(thumbnail!= undefined && amount !=undefined)
+       return (
+          <>
+            <div className="card">
+              <img src={thumbnail}/>
+              <div className="bottom">
+                <h3 className="title">React.js</h3>
+                <p className="amount">&8377;3290</p>
+              </div>
+            </div>
+          </>
+        );
+      })}
     </>
-  )
-}
+  );
+};
 
 export default Card;

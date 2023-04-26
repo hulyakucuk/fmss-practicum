@@ -1,8 +1,12 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
 import Card from "./Card";
+import { useContext } from "react";
+import { Context } from "./Context";
 
 const Header = () => {
+  const {bookData,search,setSearch,fetchData} =useContext(Context);
+
   return (
     <>
       <div className="header">
@@ -18,7 +22,11 @@ const Header = () => {
         <div className="row2">
           <h2>Search Your Book</h2>
           <div className="search">
-            <input type="text" placeholder="Enter your book name" />
+            <input type="text" 
+            placeholder="Enter your book name"
+            value={search}
+            onChange={(e)=>setSearch(e.target.value)}
+            onKeyDown={fetchData} />
             <button>
               <FaSearch className="text-purple" size={32} />
             </button>
@@ -26,7 +34,9 @@ const Header = () => {
         </div>
       </div>
       <div className="container">
-        <Card />
+       { 
+       <Card book={bookData}/>}
+
       </div>
     </>
   );

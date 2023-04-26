@@ -12,9 +12,10 @@ const ContextProvider=({children})=>{
     // save data retrieved from the API
 
     const fetchData=(evt)=>{
+        
         if(evt.key==="Enter")
         {
-            axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&key=AIzaSyBqVdHeiWGWGcptZWf6wjzRllE0MdZabhk'+'&maxResults=40')
+            axios.get(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyBqVdHeiWGWGcptZWf6wjzRllE0MdZabhk&maxResults=40`)
             .then(res=>setData(res.data.items))
             .catch(err=>console.log(err))
         }
