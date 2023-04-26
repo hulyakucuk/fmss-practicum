@@ -1,10 +1,6 @@
-
 .wrapper{
 color: rgb(252, 251, 250);
-
-
 }
-
 .header-text{
     margin-top: -1.8rem;
     margin-bottom: 2.8rem;
@@ -17,6 +13,7 @@ color: rgb(252, 251, 250);
     background:linear-gradient(rgba(290, 3, 3, 0.3), rgba(249, 240, 8, 0.3)),url("../../images/24manguel-superJumbo.jpg") center/cover no-repeat;
     flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 .header-title{
     text-transform: capitalize;

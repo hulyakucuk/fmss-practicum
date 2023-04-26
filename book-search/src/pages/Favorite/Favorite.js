@@ -3,7 +3,7 @@ import React from 'react'
 const Favorite = () => {
   return (
     <div>
-      about
+      favorite
     </div>
   )
 }
