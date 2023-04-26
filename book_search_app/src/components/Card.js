@@ -15,19 +15,22 @@ const Card = ({ book }) => {
       {book.map((item) => {
        let thumbnail=item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.smallThumbnail;
        let amount=item.saleInfo.listPrice && item.saleInfo.listPrice.amount;
-       if(thumbnail!= undefined && amount !=undefined)
-       return (
+       if(thumbnail!= undefined && amount !=undefined){
+
+        return (
           <>
-            <div className="card" onClick={()=>setShow(true);setSelectedItem(item)}>
+            <div className="card" onClick={()=>{setShow(true);setSelectedItem(item)}}>
               <img src={thumbnail}/>
               <div className="bottom">
-                <h3 className="title">React.js</h3>
-                <p className="amount">&8377;3290</p>
+                <h3 className="title">{item.volumeInfo.title}</h3>
+                <p className="amount">${amount}</p>
               </div>
             </div>
             <CardDetail show={show} item={selectedItem} onClose={()=>setShow(false)} />
           </>
         );
+       }
+      
       })}
     </>
   );
